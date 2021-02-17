@@ -24,7 +24,9 @@ namespace GMapFormExample
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleSatelliteMapProvider.Instance;
+
+            gMapControl1.DragButton = MouseButtons.Left;
+            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Paris, France");
         }
@@ -84,12 +86,33 @@ namespace GMapFormExample
                 }
 
                 DialogResult = DialogResult.OK;
-                Close();
+                //Close();
             }
             else
             {
                 MessageBox.Show("No Area Chosen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.Text)
+            {
+                case "Cache":
+                    GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.CacheOnly;
+                    break;
+
+                case "Server and Cache":
+                    GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerAndCache;
+                    break;
+
+                case "Server":
+                    GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+                    break;
+
+            }
+
+            gMapControl1.Refresh();
         }
     }
 }

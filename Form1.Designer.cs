@@ -38,6 +38,7 @@ namespace GMapFormExample
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -110,10 +111,11 @@ namespace GMapFormExample
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.textBoxLat, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBoxLon, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 0, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(770, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
@@ -131,26 +133,26 @@ namespace GMapFormExample
             // 
             this.textBoxLat.Location = new System.Drawing.Point(3, 3);
             this.textBoxLat.Name = "textBoxLat";
-            this.textBoxLat.Size = new System.Drawing.Size(156, 23);
+            this.textBoxLat.Size = new System.Drawing.Size(156, 27);
             this.textBoxLat.TabIndex = 1;
             // 
             // textBoxLon
             // 
             this.textBoxLon.Location = new System.Drawing.Point(3, 73);
             this.textBoxLon.Name = "textBoxLon";
-            this.textBoxLon.Size = new System.Drawing.Size(156, 23);
+            this.textBoxLon.Size = new System.Drawing.Size(156, 27);
             this.textBoxLon.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 213);
+            this.textBox1.Location = new System.Drawing.Point(3, 318);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 23);
+            this.textBox1.Size = new System.Drawing.Size(156, 27);
             this.textBox1.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(169, 213);
+            this.button2.Location = new System.Drawing.Point(169, 318);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 29);
             this.button2.TabIndex = 4;
@@ -160,13 +162,27 @@ namespace GMapFormExample
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(169, 318);
+            this.button3.Location = new System.Drawing.Point(169, 423);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 29);
             this.button3.TabIndex = 5;
             this.button3.Text = "Save Selection";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cache",
+            "Server and Cache",
+            "Server"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 143);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -195,6 +211,7 @@ namespace GMapFormExample
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
