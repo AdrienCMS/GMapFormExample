@@ -20,16 +20,13 @@ namespace GMapFormExample
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
-            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.CacheOnly;
             gMapControl1.SetPositionByKeywords("Paris, France");
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,12 +71,14 @@ namespace GMapFormExample
 
             if (!area.IsEmpty)
             {
-                for (int i = 3; i <= 19; i++)
+                for (int i = gMapControl1.MinZoom; i <= gMapControl1.MaxZoom; i++)
                 {
                     GMap.NET.TilePrefetcher obj = new GMap.NET.TilePrefetcher();
                     obj.Text = "Prefetching Tiles";
                     obj.Icon = this.Icon;
                     obj.Owner = this;
+
+                    
                     
                     obj.ShowCompleteMessage = false;
                     obj.Start(area, i, gMapControl1.MapProvider, 100,0);

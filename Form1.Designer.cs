@@ -33,19 +33,29 @@ namespace GMapFormExample
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxLat = new System.Windows.Forms.TextBox();
-            this.textBoxLon = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxLat = new System.Windows.Forms.TextBox();
+            this.textBoxLon = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(169, 73);
+            this.button1.Location = new System.Drawing.Point(119, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 29);
             this.button1.TabIndex = 0;
@@ -109,50 +119,54 @@ namespace GMapFormExample
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.textBoxLat, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxLon, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(770, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel1.SetRowSpan(this.tableLayoutPanel2, 2);
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.33692F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.33692F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.33692F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.9785F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.50538F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.50538F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(250, 528);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // textBoxLat
+            // groupBox1
             // 
-            this.textBoxLat.Location = new System.Drawing.Point(3, 3);
-            this.textBoxLat.Name = "textBoxLat";
-            this.textBoxLat.Size = new System.Drawing.Size(156, 27);
-            this.textBoxLat.TabIndex = 1;
+            this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 2);
+            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 301);
+            this.groupBox1.Name = "groupBox1";
+            this.tableLayoutPanel2.SetRowSpan(this.groupBox1, 2);
+            this.groupBox1.Size = new System.Drawing.Size(244, 224);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Prefetch Tiles";
             // 
-            // textBoxLon
+            // flowLayoutPanel1
             // 
-            this.textBoxLon.Location = new System.Drawing.Point(3, 73);
-            this.textBoxLon.Name = "textBoxLon";
-            this.textBoxLon.Size = new System.Drawing.Size(156, 27);
-            this.textBoxLon.TabIndex = 2;
+            this.flowLayoutPanel1.Controls.Add(this.textBox1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 26);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(232, 192);
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 318);
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 27);
+            this.textBox1.Size = new System.Drawing.Size(133, 27);
             this.textBox1.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(169, 318);
+            this.button2.Location = new System.Drawing.Point(142, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 29);
             this.button2.TabIndex = 4;
@@ -162,13 +176,70 @@ namespace GMapFormExample
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(169, 423);
+            this.button3.Location = new System.Drawing.Point(3, 38);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 29);
             this.button3.TabIndex = 5;
             this.button3.Text = "Save Selection";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tableLayoutPanel2.SetColumnSpan(this.groupBox2, 2);
+            this.groupBox2.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.tableLayoutPanel2.SetRowSpan(this.groupBox2, 3);
+            this.groupBox2.Size = new System.Drawing.Size(244, 219);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Set Coordinates";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.textBoxLat, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxLon, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 21);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(232, 192);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // textBoxLat
+            // 
+            this.textBoxLat.Location = new System.Drawing.Point(3, 3);
+            this.textBoxLat.Name = "textBoxLat";
+            this.textBoxLat.Size = new System.Drawing.Size(110, 27);
+            this.textBoxLat.TabIndex = 1;
+            // 
+            // textBoxLon
+            // 
+            this.textBoxLon.Location = new System.Drawing.Point(3, 99);
+            this.textBoxLon.Name = "textBoxLon";
+            this.textBoxLon.Size = new System.Drawing.Size(110, 27);
+            this.textBoxLon.TabIndex = 2;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tableLayoutPanel2.SetColumnSpan(this.groupBox3, 2);
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Location = new System.Drawing.Point(3, 228);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(244, 67);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Map Source";
             // 
             // comboBox1
             // 
@@ -178,9 +249,9 @@ namespace GMapFormExample
             "Cache",
             "Server and Cache",
             "Server"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 143);
+            this.comboBox1.Location = new System.Drawing.Point(9, 26);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.Size = new System.Drawing.Size(152, 28);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -192,10 +263,15 @@ namespace GMapFormExample
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,6 +288,11 @@ namespace GMapFormExample
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
