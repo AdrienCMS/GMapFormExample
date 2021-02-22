@@ -22,7 +22,7 @@ namespace GMapFormExample
             InitializeComponent();
 
             gMapControl1.DragButton = MouseButtons.Left;
-            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleSatelliteMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.CacheOnly;
             gMapControl1.SetPositionByKeywords("Paris, France");
         }
@@ -71,7 +71,7 @@ namespace GMapFormExample
 
             if (!area.IsEmpty)
             {
-                for (int i = gMapControl1.MinZoom; i <= gMapControl1.MaxZoom; i++)
+                for (int i = gMapControl1.MinZoom; i <= 19; i++)
                 {
                     GMap.NET.TilePrefetcher obj = new GMap.NET.TilePrefetcher();
                     obj.Text = "Prefetching Tiles";

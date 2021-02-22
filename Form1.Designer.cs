@@ -262,7 +262,7 @@ namespace GMapFormExample
             this.ClientSize = new System.Drawing.Size(1047, 558);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GMap example";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
